@@ -1,3 +1,4 @@
-export const If = func => arg1 => arg2 => func(arg1)(arg2);
-export const True = a => b => a;
-export const False = a => b => b;
+export const True = x => () => x;
+export const False = () => y => y;
+
+export const If = f => f;
