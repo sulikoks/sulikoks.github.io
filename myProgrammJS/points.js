@@ -15,8 +15,10 @@ const getQuadrant = point => {
 const getSymmetricalPoint = point => 
   makePoint(-getX(point), -getY(point));
 
-const calculateDistance = (point1, point2) => 
-  Math.sqrt((getX(point2) -getX(point1))**2+(getY(point2) -getY(point1))**2);
-
+const calculateDistance = (point1, point2) => {
+  const dX = getX(point2) - getX(point1);
+  const dY = getY(point2) - getY(point1);
+  return Math.sqrt((dX ** 2) + (dY ** 2));
+};
 export {getQuadrant, getSymmetricalPoint, calculateDistance};
 // END
